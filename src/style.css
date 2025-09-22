@@ -1,28 +1,32 @@
 @import "tailwindcss";
 
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@theme inline {
+  --color-white: var(--clr-white);
+  --color-gray-300: var(--clr-gray-300);
+  --color-gray-400: var(--clr-gray-400);
+  --color-gray-800: var(--clr-gray-800);
+  --color-gray-900: var(--clr-gray-900);
+  --color-background: var(--clr-background);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: oklch(27.8% 0.033 256.848);;
+  --color-green: var(--clr-green);
+  --color-green-300: var(--clr-green-300);
 
-  /* Primitive Tokens 
---clr-white: oklch(1 0 0);
 
---clr-gray-300: oklch(87.2% 0.01 258.338);
---clr-gray-400: oklch(70.7% 0.022 261.325);
---clr-gray-800: oklch(27.8% 0.033 256.848);
---clr-gray-900: oklch(21% 0.034 264.665);
+}
 
---clr-green: oklch(87.1% 0.15 154.449);
---clr-green-300: oklch(79.2% 0.209 151.711);*/
+@layer base {
+  :root {
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Primitive Tokens */
+    --clr-white: oklch(1 0 0);
+    --clr-background : oklch(0.2136 0.0483 257.95);
+    --clr-gray-300: oklch(87.2% 0.01 258.338);
+    --clr-gray-400: oklch(70.7% 0.022 261.325);
+    --clr-gray-800: oklch(27.8% 0.033 256.848);
+    --clr-gray-900: oklch(21% 0.034 264.665);
+
+    --clr-green: oklch(87.1% 0.15 154.449);
+    --clr-green-300: oklch(79.2% 0.209 151.711);
+  }
 }
